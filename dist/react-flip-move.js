@@ -129,6 +129,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -150,10 +154,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	             *   - If the two have moved, we use the FLIP technique to animate the
 	             *     transition between their positions.
 	             */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
 
 	var _react = __webpack_require__(2);
 
@@ -315,6 +315,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var staggerDelayBy = _props.staggerDelayBy;
 	      var easing = _props.easing;
 
+
 	      delay += n * staggerDelayBy;
 	      duration += n * staggerDurationBy;
 
@@ -335,6 +336,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      var dX = _getPositionDelta4[0];
 	      var dY = _getPositionDelta4[1];
+
 
 	      domNode.style.transition = 'transform 0ms';
 	      domNode.style.transform = 'translate(' + dX + 'px, ' + dY + 'px)';
@@ -400,7 +402,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement(this.props.typeName, { className: this.props.className }, this.childrenWithRefs());
+	      return _react2.default.createElement(this.props.typeName, { className: this.props.className, style: this.props.style }, this.childrenWithRefs());
 	    }
 	  }]);
 
@@ -416,13 +418,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
